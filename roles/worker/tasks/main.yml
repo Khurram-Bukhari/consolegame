@@ -1,0 +1,15 @@
+---
+# tasks file for worker
+
+
+- name: print join token
+  debug:
+    msg: "{{ hostvars['manager1']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+
+
+- name: Add nodes
+  community.docker.docker_swarm:
+    state: join
+    advertise_addr: "{{ inventory_hostname }}"
+    join_token: "{{ hostvars['manager1']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'manager1:2377' ] 

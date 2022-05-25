@@ -1,0 +1,9 @@
+---
+# tasks file for stackdeploy
+
+- name: Deploy a stack from a compose file
+  community.docker.docker_stack:
+    state: present
+    name: mystack
+    compose:
+     - /home/Khurram/project/docker-compose.yaml
