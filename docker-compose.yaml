@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  service1:
+    build: ./service1/application/
+    image: syed110313/service_1:latest
+    ports:
+    - published: 5000
+      target: 5000
+      protocol: tcp
+    
+  service2:
+    image: syed110313/service_2:latest
+    build: ./service2/application/
+    ports:
+    - published: 5001
+      target: 5001
+      protocol: tcp
+
+  service3:
+    image: syed110313/service_3:latest
+    build: ./service3/application/
+    ports:
+    - published: 5002
+      target: 5002
+      protocol: tcp
+
+  service4:
+    image: syed110313/service_4:latest
+    build: ./service4/application/  
+    ports:
+    - published: 5003
+      target: 5003
+      protocol: tcp
+

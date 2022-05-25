@@ -1,0 +1,8 @@
+---
+# tasks file for managerclonerepo
+
+
+- git: 
+    repo: https://github.com/Khurram-Bukhari/ConsoleGameGeneratorSFIA2.git
+    dest: /home/Khurram/project
+ 
