@@ -3,6 +3,7 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
 @app.route('/getconsolegame', methods = ['GET'])
 def get_consolegame():
     console = requests.get('http://service2:5001/console').text
