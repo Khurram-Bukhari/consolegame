@@ -3,6 +3,6 @@
 
 
 - git: 
-    repo: https://github.com/Khurram-Bukhari/ConsoleGameGeneratorSFIA2.git
+    repo: https://github.com/Khurram-Bukhari/consolegame.git
     dest: /home/Khurram/project
  
